@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import MultiSortSelect from './MultiSortSelect.js';
 import './App.css';
 import _ from 'lodash';
@@ -15,6 +14,7 @@ class App extends Component {
   constructor(props){
     super(props)
     this.updateOption = this.updateOption.bind(this);
+    this.onSortEnd = this.onSortEnd.bind(this);
     this.state = {
       options,
       selected: options.slice(0,2)
@@ -29,6 +29,10 @@ class App extends Component {
     })
   }
 
+  onSortEnd(selected){
+    this.setState({selected})
+  }
+
   render() {
     return (
       <div className="App">
@@ -39,6 +43,7 @@ class App extends Component {
           <MultiSortSelect
             {...this.state}
             updateOption={this.updateOption}
+            onSortEnd={this.onSortEnd}
           />
         </p>
       </div>
