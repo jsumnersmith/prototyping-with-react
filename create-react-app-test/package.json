@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^0.12.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-sortable-hoc": "^0.6.2"
   },
+  "homepage": "https://jusmnersmith.github.io/create-react-app-test",
   "devDependencies": {
     "react-scripts": "0.9.5"
   },
@@ -14,6 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
