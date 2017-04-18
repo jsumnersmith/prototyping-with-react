@@ -1,0 +1,16 @@
+{
+  "name": "next-js-test",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-sortable-hoc": "^0.6.2"
+  }
+}
